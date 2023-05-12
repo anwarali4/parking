@@ -10,7 +10,6 @@ class ParkingLot
     slots.each_with_index do |slot, idx|
       return idx if slot.nil?
     end
-
     nil
   end
 
@@ -22,20 +21,16 @@ class ParkingLot
     result = []
     slots.each do |slot|
       next unless slot
-
       result << slot.reg_no if slot.color == color
     end
-
     result
   end
 
   def get_slot_num_by_reg_no(reg_no)
     slots.each_with_index do |slot, idx|
       next unless slot
-
-      return (idx + 1).to_s if slot.reg_no == reg_no
+      result << "Slot No: #{(idx + 1).to_s} \t  Reg No: #{slot.reg_no} \t Color: #{slot.color}" if slot.reg_no == reg_no
     end
-
     nil
   end
 
@@ -43,10 +38,8 @@ class ParkingLot
     result = []
     slots.each_with_index do |slot, idx|
       next unless slot
-
-      result << (idx + 1).to_s if slot.color == color
+      result << "Slot No: #{(idx + 1).to_s} \t  Reg No: #{slot.reg_no} \t Color: #{slot.color}" if slot.color == color
     end
-
     result
   end
 

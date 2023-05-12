@@ -114,7 +114,7 @@ class ParkingSystem
 
   def dislay results
   	results.each_with_index do |result, id|
-   		puts "#{id+1}, #{result}"
+   		puts "#{result}"
    	end
   end
 
